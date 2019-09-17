@@ -1,0 +1,80 @@
+{
+  "name": "@whtsky/renovate-config",
+  "version": "0.1.0",
+  "description": "My shareable config for Renovate",
+  "main": "index.js",
+  "scripts": {
+    "test": "renovate-config-validator",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whtsky/renovate-config.git"
+  },
+  "keywords": [
+    "renovate"
+  ],
+  "author": "Wu Haotian <whtsky@gmail.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/whtsky/renovate-config/issues"
+  },
+  "homepage": "https://github.com/whtsky/renovate-config#readme",
+  "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "husky": "3.0.5",
+    "prettier": "1.18.2",
+    "pretty-quick": "1.11.1",
+    "renovate": "19.43.4",
+    "standard-version": "7.0.0"
+  },
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "@whtsky:react-apolloMonorepo",
+        ":separateMultipleMajorReleases",
+        ":ignoreUnstable",
+        ":renovatePrefix",
+        ":semanticPrefixFixDepsChoreOthers",
+        ":updateNotScheduled",
+        ":automergeDisabled",
+        ":ignoreModulesAndTests",
+        ":maintainLockFilesDisabled",
+        ":autodetectPinVersions",
+        "group:monorepos",
+        "group:fortawesome",
+        ":maintainLockFilesWeekly",
+        ":pinVersions",
+        "helpers:disableTypesNodeMajor"
+      ],
+      "semanticCommits": true,
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "dependencies",
+      "rebaseStalePrs": true,
+      "prHourlyLimit": 2,
+      "rangeStrategy": "bump",
+      "separateMinorPatch": true,
+      "python": {
+        "enabled": true
+      }
+    },
+    "react-apolloMonorepo": {
+      "packageRules": [
+        {
+          "description": "Group packages from react-apollo monorepo together",
+          "groupName": "react-apollo monorepo",
+          "sourceUrlPrefixes": [
+            "https://github.com/apollographql/react-apollo"
+          ]
+        }
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
