@@ -2,11 +2,11 @@
   "name": "@whtsky/renovate-config",
   "version": "0.1.0",
   "description": "My shareable config for Renovate",
-  "main": "index.js",
   "scripts": {
     "test": "renovate-config-validator",
     "release": "standard-version"
   },
+  "files": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/whtsky/renovate-config.git"
