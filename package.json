@@ -34,6 +34,7 @@
     "default": {
       "extends": [
         "@whtsky:react-apolloMonorepo",
+        "@whtsky:autoMergeNonMajorDevDependencies",
         ":separateMultipleMajorReleases",
         ":ignoreUnstable",
         ":renovatePrefix",
@@ -68,6 +69,21 @@
           "sourceUrlPrefixes": [
             "https://github.com/apollographql/react-apollo"
           ]
+        }
+      ]
+    },
+    "autoMergeNonMajorDevDependencies": {
+      "packageRules": [
+        {
+          "depTypeList": [
+            "devDependencies"
+          ],
+          "minor": {
+            "automerge": true
+          },
+          "patch": {
+            "automerge": true
+          }
         }
       ]
     }
