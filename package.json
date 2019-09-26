@@ -1,6 +1,6 @@
 {
   "name": "@whtsky/renovate-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "My shareable config for Renovate",
   "scripts": {
     "test": "renovate-config-validator && prettier -c *.json *.js",
