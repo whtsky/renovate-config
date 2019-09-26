@@ -59,7 +59,12 @@
       "separateMinorPatch": true,
       "python": {
         "enabled": true
-      }
+      },
+      "postUpdateOptions": [
+        "gomodTidy",
+        "npmDedupe",
+        "yarnDedupeHighest"
+      ]
     },
     "react-apolloMonorepo": {
       "packageRules": [
