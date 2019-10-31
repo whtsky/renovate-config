@@ -81,7 +81,8 @@
       "packageRules": [
         {
           "depTypeList": [
-            "devDependencies"
+            "devDependencies",
+            "dev-dependencies"
           ],
           "minor": {
             "automerge": true
