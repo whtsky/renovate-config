@@ -28,7 +28,7 @@
     "prettier": "1.19.1",
     "pretty-quick": "2.0.1",
     "renovate": "19.66.15",
-    "standard-version": "7.0.0"
+    "standard-version": "7.0.1"
   },
   "renovate-config": {
     "default": {
