@@ -35,6 +35,7 @@
       "extends": [
         "@whtsky:react-apolloMonorepo",
         "@whtsky:autoMergeNonMajorDevDependencies",
+        "@whtsky:autoMergeLockFileMaintaince",
         ":separateMultipleMajorReleases",
         ":ignoreUnstable",
         ":renovatePrefix",
@@ -42,7 +43,6 @@
         ":updateNotScheduled",
         ":automergeDisabled",
         ":ignoreModulesAndTests",
-        ":maintainLockFilesDisabled",
         ":autodetectPinVersions",
         "group:monorepos",
         "group:fortawesome",
@@ -92,6 +92,11 @@
           }
         }
       ]
+    },
+    "autoMergeLockFileMaintaince": {
+      "lockFileMaintenance": {
+        "automerge": true
+      }
     }
   },
   "husky": {
