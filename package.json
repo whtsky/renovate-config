@@ -53,7 +53,7 @@
       "semanticCommits": true,
       "semanticCommitType": "chore",
       "semanticCommitScope": "dependencies",
-      "rebaseStalePrs": true,
+      "rebaseWhen": "behind-base-branch",
       "prHourlyLimit": 2,
       "rangeStrategy": "bump",
       "separateMinorPatch": true,
