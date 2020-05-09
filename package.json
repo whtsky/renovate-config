@@ -27,7 +27,7 @@
     "husky": "4.2.5",
     "prettier": "2.0.5",
     "pretty-quick": "2.0.1",
-    "renovate": "19.233.4",
+    "renovate": "19.234.0",
     "standard-version": "7.1.0"
   },
   "renovate-config": {
