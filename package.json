@@ -34,6 +34,7 @@
     "default": {
       "extends": [
         "@whtsky:react-apolloMonorepo",
+        "@whtsky:celeryPackages",
         "@whtsky:autoMergeNonMajorDevDependencies",
         "@whtsky:autoMergeLockFileMaintaince",
         ":separateMultipleMajorReleases",
@@ -73,6 +74,24 @@
           "groupName": "react-apollo monorepo",
           "sourceUrlPrefixes": [
             "https://github.com/apollographql/react-apollo"
+          ]
+        }
+      ]
+    },
+    "celeryPackages": {
+      "packageRules": [
+        {
+          "description": "Python packages for Celery",
+          "groupName": "celery pacakages",
+          "datasources": [
+            "pypi"
+          ],
+          "packageNames": [
+            "celery",
+            "amqp",
+            "billiard",
+            "kombu",
+            "vine"
           ]
         }
       ]
