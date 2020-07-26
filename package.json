@@ -58,6 +58,7 @@
       "prHourlyLimit": 2,
       "rangeStrategy": "bump",
       "separateMinorPatch": true,
+      "includeForks": true,
       "python": {
         "enabled": true
       },
