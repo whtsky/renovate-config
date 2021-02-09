@@ -37,6 +37,7 @@
         "@whtsky:celeryPackages",
         "@whtsky:autoMergeNonMajorDevDependencies",
         "@whtsky:autoMergeLockFileMaintaince",
+        "@whtsky:autoMergeActions",
         ":separateMultipleMajorReleases",
         ":ignoreUnstable",
         ":renovatePrefix",
@@ -117,6 +118,16 @@
       "lockFileMaintenance": {
         "automerge": true
       }
+    },
+    "autoMergeActions": {
+      "packageRules": [
+        {
+          "depTypeList": [
+            "action"
+          ],
+          "automerge": true
+        }
+      ]
     }
   },
   "husky": {
