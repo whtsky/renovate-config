@@ -26,7 +26,7 @@
     "@whtsky/prettier-config": "1.0.1",
     "husky": "4.3.8",
     "prettier": "2.3.1",
-    "pretty-quick": "3.1.0",
+    "pretty-quick": "3.1.1",
     "renovate": "19.239.11",
     "standard-version": "9.3.0"
   },
