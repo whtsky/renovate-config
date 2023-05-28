@@ -25,7 +25,7 @@
     "@commitlint/config-conventional": "11.0.0",
     "@whtsky/prettier-config": "1.0.1",
     "husky": "4.3.8",
-    "prettier": "2.3.2",
+    "prettier": "2.8.8",
     "pretty-quick": "3.1.1",
     "renovate": "19.239.11",
     "standard-version": "9.3.1"
