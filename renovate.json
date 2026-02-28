@@ -1,3 +1,4 @@
 {
-  "extends": ["@whtsky", "@whtsky:autoMergeLockFileMaintaince"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>whtsky/renovate-config", "github>whtsky/renovate-config:autoMergeLockFileMaintenance"]
 }

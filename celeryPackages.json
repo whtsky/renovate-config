@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Group Python Celery-related packages together",
+  "packageRules": [
+    {
+      "description": "Python packages for Celery",
+      "groupName": "celery packages",
+      "matchDatasources": ["pypi"],
+      "matchPackageNames": ["celery", "amqp", "billiard", "kombu", "vine"]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Group packages from react-apollo monorepo together",
+  "packageRules": [
+    {
+      "description": "Group packages from react-apollo monorepo together",
+      "groupName": "react-apollo monorepo",
+      "matchSourceUrls": ["https://github.com/apollographql/react-apollo"]
+    }
+  ]
+}

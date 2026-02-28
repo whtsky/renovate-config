@@ -1,10 +1,10 @@
 {
   "name": "@whtsky/renovate-config",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "description": "My shareable config for Renovate",
   "scripts": {
-    "test": "renovate-config-validator && prettier -c *.json *.js",
-    "release": "standard-version"
+    "test": "renovate-config-validator && prettier --check \"*.json\" \"*.js\" \"*.md\"",
+    "prepare": "husky"
   },
   "files": [],
   "repository": {
@@ -21,120 +21,12 @@
   },
   "homepage": "https://github.com/whtsky/renovate-config#readme",
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "@whtsky/prettier-config": "1.0.1",
-    "husky": "4.3.8",
-    "prettier": "2.3.2",
-    "pretty-quick": "3.1.1",
-    "renovate": "19.239.11",
-    "standard-version": "9.3.1"
-  },
-  "renovate-config": {
-    "default": {
-      "extends": [
-        "@whtsky:react-apolloMonorepo",
-        "@whtsky:celeryPackages",
-        "@whtsky:autoMergeNonMajorDevDependencies",
-        "@whtsky:autoMergeLockFileMaintaince",
-        "@whtsky:autoMergeActions",
-        ":separateMultipleMajorReleases",
-        ":ignoreUnstable",
-        ":renovatePrefix",
-        ":semanticPrefixFixDepsChoreOthers",
-        ":updateNotScheduled",
-        ":automergeDisabled",
-        ":ignoreModulesAndTests",
-        ":autodetectPinVersions",
-        "group:monorepos",
-        "group:fortawesome",
-        ":maintainLockFilesWeekly",
-        ":pinVersions",
-        "helpers:disableTypesNodeMajor"
-      ],
-      "semanticCommits": true,
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "dependencies",
-      "rebaseWhen": "behind-base-branch",
-      "prHourlyLimit": 2,
-      "rangeStrategy": "bump",
-      "separateMinorPatch": true,
-      "includeForks": true,
-      "python": {
-        "enabled": true
-      },
-      "postUpdateOptions": [
-        "gomodTidy",
-        "npmDedupe",
-        "yarnDedupeHighest"
-      ]
-    },
-    "react-apolloMonorepo": {
-      "packageRules": [
-        {
-          "description": "Group packages from react-apollo monorepo together",
-          "groupName": "react-apollo monorepo",
-          "sourceUrlPrefixes": [
-            "https://github.com/apollographql/react-apollo"
-          ]
-        }
-      ]
-    },
-    "celeryPackages": {
-      "packageRules": [
-        {
-          "description": "Python packages for Celery",
-          "groupName": "celery pacakages",
-          "datasources": [
-            "pypi"
-          ],
-          "packageNames": [
-            "celery",
-            "amqp",
-            "billiard",
-            "kombu",
-            "vine"
-          ]
-        }
-      ]
-    },
-    "autoMergeNonMajorDevDependencies": {
-      "packageRules": [
-        {
-          "depTypeList": [
-            "devDependencies",
-            "dev-dependencies"
-          ],
-          "minor": {
-            "automerge": true
-          },
-          "patch": {
-            "automerge": true
-          }
-        }
-      ]
-    },
-    "autoMergeLockFileMaintaince": {
-      "lockFileMaintenance": {
-        "automerge": true
-      }
-    },
-    "autoMergeActions": {
-      "packageRules": [
-        {
-          "depTypeList": [
-            "action"
-          ],
-          "automerge": true
-        }
-      ]
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "pretty-quick --staged"
-    }
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@whtsky/prettier-config": "^1.0.1",
+    "husky": "^9.0.0",
+    "prettier": "^3.0.0",
+    "renovate": "^39.0.0"
   },
   "prettier": "@whtsky/prettier-config"
 }

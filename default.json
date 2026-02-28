@@ -1,0 +1,46 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default preset for @whtsky/renovate-config",
+  "extends": [
+    "config:best-practices",
+    "helpers:pinGitHubActionDigestsToSemver",
+    "helpers:disableTypesNodeMajor",
+    "group:fortawesome",
+    "github>whtsky/renovate-config:celeryPackages",
+    "github>whtsky/renovate-config:react-apolloMonorepo"
+  ],
+  "semanticCommits": "enabled",
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "dependencies",
+  "rebaseWhen": "behind-base-branch",
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 10,
+  "rangeStrategy": "bump",
+  "separateMinorPatch": true,
+  "separateMultipleMajorReleases": true,
+  "includeForks": true,
+  "osvVulnerabilityAlerts": true,
+  "python": {
+    "enabled": true
+  },
+  "postUpdateOptions": ["gomodTidy", "npmDedupe"],
+  "packageRules": [
+    {
+      "description": "Automerge non-major devDependencies",
+      "matchDepTypes": ["devDependencies", "dev-dependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "description": "Automerge GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge lock file maintenance",
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "automerge": true
+    }
+  ]
+}
