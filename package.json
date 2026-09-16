@@ -21,12 +21,12 @@
   },
   "homepage": "https://github.com/whtsky/renovate-config#readme",
   "devDependencies": {
-    "@commitlint/cli": "^21.0.0",
-    "@commitlint/config-conventional": "^21.0.0",
-    "@whtsky/prettier-config": "^1.0.1",
-    "husky": "^9.0.0",
-    "prettier": "^3.8.1",
-    "renovate": "^44.0.0"
+    "@commitlint/cli": "21.2.2",
+    "@commitlint/config-conventional": "21.2.2",
+    "@whtsky/prettier-config": "1.0.1",
+    "husky": "9.1.7",
+    "prettier": "3.9.6",
+    "renovate": "44.82.5"
   },
   "prettier": "@whtsky/prettier-config"
 }
