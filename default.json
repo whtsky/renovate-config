@@ -17,14 +17,20 @@
   "prConcurrentLimit": 10,
   "rangeStrategy": "bump",
   "separateMinorPatch": true,
-  "separateMultipleMajorReleases": true,
-  "includeForks": true,
+  "forkProcessing": "enabled",
   "osvVulnerabilityAlerts": true,
-  "python": {
-    "enabled": true
-  },
   "postUpdateOptions": ["gomodTidy", "npmDedupe"],
   "packageRules": [
+    {
+      "matchCategories": ["python"],
+      "enabled": true
+    },
+    {
+      "description": "Do not update Python support constraints",
+      "matchManagers": ["poetry", "pep621"],
+      "matchPackageNames": ["python"],
+      "enabled": false
+    },
     {
       "description": "Automerge non-major devDependencies",
       "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
