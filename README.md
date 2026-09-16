@@ -70,7 +70,9 @@ The default preset includes:
 - **Rate limiting**: Max 2 PRs per hour, 10 concurrent PRs
 - **Range strategy**: Bumps versions (doesn't widen ranges)
 - **Separate minor/patch**: Creates separate PRs for minor and patch updates
-- **Python support**: Enabled
+- **Fork processing**: Processes forked repositories
+- **Python support**: Enables Python package managers while excluding Poetry/PEP 621 support-constraint updates
+- **Python CI runtimes**: Keeps GitHub Actions Python runtime updates managed
 - **Post-update options**: Runs `go mod tidy` and `npm dedupe`
 - **Automerge**: Non-major devDependencies, GitHub Actions, lock file maintenance (branch strategy for speed)
 
