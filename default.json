@@ -28,7 +28,7 @@
     {
       "description": "Do not update Python support constraints",
       "matchManagers": ["poetry", "pep621"],
-      "matchPackageNames": ["python"],
+      "matchPackageNames": ["containerbase/python-prebuild", "python"],
       "enabled": false
     },
     {
