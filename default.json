@@ -27,7 +27,7 @@
   "packageRules": [
     {
       "description": "Automerge non-major devDependencies",
-      "matchDepTypes": ["devDependencies", "dev-dependencies"],
+      "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
       "automergeType": "branch"
