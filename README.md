@@ -74,7 +74,7 @@ The default preset includes:
 - **Python support**: Enables Python package managers while excluding Poetry/PEP 621 support-constraint updates
 - **Python CI runtimes**: Keeps GitHub Actions Python runtime updates managed
 - **Post-update options**: Runs `go mod tidy` and `npm dedupe`
-- **Automerge**: Non-major devDependencies, GitHub Actions, and lock file maintenance use PR/platform auto-merge and are compatible with GitHub Merge Queue
+- **Automerge**: Non-major devDependencies, major `mypy` updates, GitHub Actions, and lock file maintenance use PR/platform auto-merge, subject to required checks passing, and are compatible with GitHub Merge Queue
 
 ## License
 

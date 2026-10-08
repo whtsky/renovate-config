@@ -40,6 +40,14 @@
       "platformAutomerge": true
     },
     {
+      "description": "Automerge major mypy updates",
+      "matchPackageNames": ["mypy"],
+      "matchUpdateTypes": ["major"],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    },
+    {
       "description": "Automerge GitHub Actions",
       "matchManagers": ["github-actions"],
       "automerge": true,
