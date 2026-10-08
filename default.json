@@ -40,6 +40,15 @@
       "platformAutomerge": true
     },
     {
+      "description": "Automerge non-major Black updates after checks pass",
+      "matchDatasources": ["pypi"],
+      "matchPackageNames": ["black"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": false
+    },
+    {
       "description": "Automerge major mypy updates",
       "matchPackageNames": ["mypy"],
       "matchUpdateTypes": ["major"],
