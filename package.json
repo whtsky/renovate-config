@@ -26,7 +26,7 @@
     "@whtsky/prettier-config": "^1.0.1",
     "husky": "^9.0.0",
     "prettier": "^3.9.8",
-    "renovate": "^44.138.0"
+    "renovate": "^44.140.0"
   },
   "prettier": "@whtsky/prettier-config"
 }
