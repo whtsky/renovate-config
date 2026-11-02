@@ -49,6 +49,15 @@
       "platformAutomerge": false
     },
     {
+      "description": "Automerge non-major Cython updates after checks pass",
+      "matchDatasources": ["pypi"],
+      "matchPackageNames": ["cython", "Cython"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": false
+    },
+    {
       "description": "Automerge major mypy updates",
       "matchPackageNames": ["mypy"],
       "matchUpdateTypes": ["major"],
